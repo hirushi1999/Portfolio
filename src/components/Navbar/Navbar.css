@@ -114,6 +114,13 @@
     }
 
     .logo {
-        margin-left: 20px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1325px){
+    .nav-wrapper{
+        padding: 0 2rem;
     }
 }
