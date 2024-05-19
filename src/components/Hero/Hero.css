@@ -70,7 +70,7 @@
 }
 
 .hero-img > div > img {
-    width: 25rem;
+    width: 22rem;
     transition: all 0.3s ease;
 }
 
@@ -101,4 +101,95 @@
 .rounded-box {
     border: 2px solid #6852ba; 
     border-radius: 15px; 
-  }
+}
+
+@media (max-width: 1025px){
+
+    .hero-content h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    .hero-img > div > img {
+        width: 15rem;
+    }
+
+    .tech-icon {
+        width: 3rem;
+    }
+}
+
+@media (max-width: 768px){
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .hero-container h2 {
+        margin-top: 3rem;
+    }
+
+    .hero-content h2,
+    .hero-content h4,
+    .hero-content p {
+        width: auto;
+        text-align: center;
+    }
+
+    .hero-container::after,
+    .hero-container::before {
+        content: " ";
+        width: 18rem;
+        height: 28rem
+    }
+
+    .hero-container::after {
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .hero-container::before {
+        bottom: 2rem;
+        right: 0rem;
+    }
+
+    .hero-img > div > img {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 600px){
+    .hero-content h2 {
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+
+    .hero-content h4{
+        font-size: 1rem;
+    }
+
+    .hero-img{
+        gap: 1rem;
+    }
+
+    .hero-img > div {
+        gap: 1rem;
+    }
+
+    .hero-img > div > img {
+        width: 16rem;
+    }
+
+    .large-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
