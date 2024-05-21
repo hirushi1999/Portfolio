@@ -8,7 +8,9 @@ const SkillCard = ({ title, icon: Icon, isActive, onClick }) => {
       onClick={() => onClick()}
     >
       <div className="skill-icon">
-        <Icon />
+        <div className="icon-skill">
+          <Icon />
+        </div>
       </div>
 
       <span>{title}</span>
