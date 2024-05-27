@@ -3,6 +3,21 @@ import "./MobileNavbar.css";
 import { TbChartArcs3 } from "react-icons/tb";
 
 const MobileNavBar = ({ isOpen, toggleMenu }) => {
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 60, 
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const handleMobileHireMe = () => {
+    window.location.href = 'https://drive.google.com/drive/folders/1r3qUFRpJyxgI2bDgdpeHauZUYVITyrnS?usp=sharing';
+  }
+
   return (
     <div className={`mobile-menu ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
       <div className='mobile-menu-container'>
@@ -12,26 +27,26 @@ const MobileNavBar = ({ isOpen, toggleMenu }) => {
 
         <ul>
           <li>
-            <a className='menu-item'>Home</a>
+            <a className='menu-item' onClick={() => scrollToSection('hero')}>Home</a>
           </li>
 
           <li>
-            <a className="menu-item">Skills</a>
+            <a className="menu-item" onClick={() => scrollToSection('skills')}>Skills</a>
           </li>
 
           <li>
-            <a className="menu-item">Work Experience</a>
+            <a className="menu-item" onClick={() => scrollToSection('workExperience')}>Work Experience</a>
           </li>
 
           <li>
-            <a className="menu-item">Projects</a>
+            <a className="menu-item" onClick={() => scrollToSection('projects')}>Projects</a>
           </li>
 
           <li>
-            <a className="menu-item">Contact Me</a>
+            <a className="menu-item" onClick={() => scrollToSection('contactMe')}>Contact Me</a>
           </li>
 
-          <button className='contact-btn' onClick={() => {}}>Hire Me</button>
+          <button className='contact-btn' onClick={handleMobileHireMe}>Hire Me</button>
         </ul>
       </div>
     </div>
