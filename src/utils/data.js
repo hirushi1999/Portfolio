@@ -78,7 +78,6 @@ export const PROJECTS = [
       "This study focused on addressing challenges faced by farmers in Sri Lanka, particularly related to low income and vegetable wastage.",
       "An application was developed to predict the most profitable vegetable crop and determine the required land for cultivation.",
       "The prediction models, utilizing machine learning algorithms such as RF, MLR, LSTM, RFR, and LR, considered factors like location, month, cultivation expenses, and weather conditions.",
-      "For more Info: https://ieeexplore.ieee.org/document/10365011/",
     ],
   },
   {

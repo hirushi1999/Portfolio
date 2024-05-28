@@ -24,13 +24,13 @@ const Hero = () => {
         </div>
         <div className='hero-img'>
           <div>
-            <div className='tech-icon large-icon' style={{color: '#00FFFF'}}>
-              <FaReact />
-            </div>
             <img src={ HeroImg } alt="" class="rounded-box" style={{ width: '300px', height: '300px'}}/>
           </div>
 
           <div>
+            <div className='tech-icon large-icon' style={{color: '#00FFFF'}}>
+              <FaReact />
+            </div>
             <div className='tech-icon large-icon' style={{color: '#FFFF00'}}>
               <IoLogoJavascript />
             </div>
