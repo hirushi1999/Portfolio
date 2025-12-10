@@ -11,7 +11,7 @@ export const SKILLS = [
       { skill: "CSS", percentage: "80%" },
       { skill: "JavaScript", percentage: "70%" },
       { skill: "React", percentage: "60%" },
-      { skill: "Angular", percentage: "40%" },
+      { skill: "Angular", percentage: "60%" },
     ],
   },
   {
@@ -26,12 +26,13 @@ export const SKILLS = [
     ],
   },
   {
-    title: "Tools",
+    title: "Version Control/DevOps",
     icon: FaTools,
     skills: [
       { skill: "Git", percentage: "90%" },
-      { skill: "Visual Studio Code", percentage: "75%" },
-      { skill: "Intellij", percentage: "90%" },
+      { skill: "Azure DevOps Server", percentage: "60%" },
+      { skill: "AWS", percentage: "40%" },
+      { skill: "Docker", percentage: "40%" },
     ],
   },
   {
@@ -47,6 +48,16 @@ export const SKILLS = [
 ];
 
 export const WORK_EXPERIENCE = [
+  {
+    title: "Software Engineer - Epic Lanka Pvt Ltd",
+    date: "October 2024 - Present",
+    responsibilities: [
+      "Designing and developing secure, scalable features for Admin, Merchant, and Client portals using Angular and microservices architecture",
+      "Enhancing fintech transaction flows for internet banking module",
+      "Developing and optimizing PDF and Excel report generation for high-volume financial operations.",
+      "Collaborating with cross-functional teams to deliver high-quality solutions in an Agile environment.",
+    ],
+  },
   {
     title: "Associate Software Engineer - Epic Lanka Pvt Ltd",
     date: "August 2023 - Present",
@@ -78,6 +89,17 @@ export const PROJECTS = [
       "This study focused on addressing challenges faced by farmers in Sri Lanka, particularly related to low income and vegetable wastage.",
       "An application was developed to predict the most profitable vegetable crop and determine the required land for cultivation.",
       "The prediction models, utilizing machine learning algorithms such as RF, MLR, LSTM, RFR, and LR, considered factors like location, month, cultivation expenses, and weather conditions.",
+    ],
+  },
+  {
+    title: "NeOS Product",
+    technologies:
+      "Angular, Spring Boot, Oracle, Docker, JIRA",
+    tasks: [
+      "Contributed to both frontend (Angular) and backend (Spring Boot APIs) development for Admin, Merchant, and Client portals.",
+      "Optimized performance and ensured security compliance for high-volume financial operations.",
+      "Developed and optimized transaction flows in Internet Banking, including cashback loans, leasing, automated bills, etc.",
+      "Led version migration activities in the Admin Portal, including upgrading Angular/Spring Boot versions, resolving compatibility issues.",
     ],
   },
   {

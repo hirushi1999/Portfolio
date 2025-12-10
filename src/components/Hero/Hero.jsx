@@ -14,12 +14,10 @@ const Hero = () => {
             
             <br />
             <p>
-                I am a highly motivated individual with substantial experience
-                and the capability to meet deadlines in the modern dynamic
-                business field. I am seeking a challenge at an esteemed
-                establishment where my skills will greatly enhance the success
-                and prosperity of the organization, as well as contribute to my
-                personal growth.
+            Passionate about building meaningful digital solutions, I am a self-driven Software Engineer with solid experience in 
+            full-stack development and real-world fintech projects. I thrive in fast-paced environments, enjoy learning new technologies,
+             and consistently deliver quality solutions on time. I recently updated my portfolio to reflect my latest projects, achievements, 
+             and technical growth, and I am excited to bring this experience to a new challenge.
             </p>
         </div>
         <div className='hero-img'>
