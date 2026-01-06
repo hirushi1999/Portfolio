@@ -1,56 +1,64 @@
 .work-experience-card {
-    background: #130f2a;
-    border-radius: 0.65rem;
-    border: 1.5px solid #6751b9;
-    padding: 1.5rem;
+    background: rgba(30, 41, 59, 0.4); /* Slate-800 Glass */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
     margin: 0 1rem;
+    min-height: 350px;
+    transition: all 0.3s ease;
+}
+
+.work-experience-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(30, 41, 59, 0.6);
 }
 
 .work-experience-card h6 {
-    font-size: 1.05rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
     margin-bottom: 0.7rem;
+    letter-spacing: 0.5px;
 }
 
 .work-duration {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 400;
-    background: rgba(103, 81, 185, 0.5);
-    border-radius: 0.3rem;
-    padding: 0.4rem 0.6rem;
-    margin-bottom: 1.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #818cf8; /* Light Indigo */
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.work-experience-card ul {
+    padding-left: 1.2rem;
 }
 
 .work-experience-card ul li {
     list-style: none;
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #cbd5e1; /* Soft Slate text */
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
     position: relative;
 }
 
-.work-experience-card ul li::after {
-    content: " ";
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: #6751b9;
-    border-radius: 0.5rem;
+/* More professional Custom Bullet */
+.work-experience-card ul li::before {
+    content: "▹"; /* Elegant arrow bullet */
+    color: #6366f1;
+    font-weight: bold;
     position: absolute;
-    left: -1.3rem;
-    top: 0.4rem;
+    left: -1.2rem;
 }
 
 @media (max-width: 768px) {
     .work-experience-card {
-        margin: 0;
-    }
-
-    .work-experience-card h6 {
-        font-size: 0.95rem;
-    }
-
-    .work-experience-card ul li {
-        font-size: 0.75rem;
+        margin: 0 0.5rem;
+        padding: 1.5rem;
     }
 }

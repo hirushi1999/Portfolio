@@ -3,6 +3,7 @@ import "./WorkExperience.css";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
 import { WORK_EXPERIENCE } from "../../utils/data";
 import Slider from "react-slick";
+import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 
 const WorkExperience = () => {
   const sliderRef = useRef();
@@ -39,11 +40,11 @@ const WorkExperience = () => {
 
       <div className="experience-content">
         <div className="arrow-right" onClick={slideRight}>
-          <span class="material-symbols-outlined">&gt;</span>
+          <RiArrowRightSLine /> {/* Import this from react-icons/ri */}
         </div>
 
         <div className="arrow-left" onClick={slideLeft}>
-          <span class="material-symbols-outlined">&lt;</span>
+          <RiArrowLeftSLine />
         </div>
 
         <Slider ref={sliderRef} {...settings}>

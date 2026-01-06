@@ -1,20 +1,19 @@
 .skills-info-card {
     min-height: 23rem;
-    border-radius: 0.65rem;
-    border: 1.5px solid #6751b9;
-    background: rgba(22, 17, 47, 0.398);
-    backdrop-filter: blur(1rem);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
 .skills-info-card h6 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(180deg, #ac96ff 0%, #7c5fe6 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 1.5px solid #6751b9;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 1.5rem 2rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skills-info-content {
@@ -25,44 +24,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
 .skill-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
+    color: #94a3b8; /* Muted Slate */
 }
 
 .skill-info .percentage {
-    color: #dd8cfa;
+    color: #6366f1; /* Using our primary Indigo */
+    font-weight: 600;
 }
 
 .skill-progress-bg {
     width: 100%;
-    height: 0.5rem;
-    background: #382e68;
-    border-radius: 0.5rem;
-    margin: 0.5rem 0;
+    height: 6px; /* Thinner is more professional */
+    background: rgba(56, 46, 104, 0.3);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
     overflow: hidden;
 }
 
 .skill-progress {
-    width: 0%;
-    height: 0.5rem;
-    background: linear-gradient(90deg, #aa94fe -50%, #7d60e6 50%);
-    border-radius: 0.5rem;
-    transition: all 0.5s ease-in-out;
-}
-
-@media (max-width: 1025px) {
-    .skills-info-card h6 {
-        font-size: 1.1rem;
-    }
-
-    .skill-info p {
-       padding: 0.9rem; 
-    }
-
-    .skills-info-content {
-        padding: 1.5rem;
-    }
+    height: 100%;
+    background: #6366f1; /* Solid Indigo is cleaner than gradients here */
+    border-radius: 10px;
+    transition: width 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }

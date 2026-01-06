@@ -1,67 +1,54 @@
 .experience-container {
-    margin: 4rem 0;
+    margin: 6rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
     position: relative;
 }
 
 .experience-container h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 3rem;
+    color: #ffffff;
 }
 
 .arrow-right,
 .arrow-left {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6751b9;
-    border-radius: 0.65rem;
-    border: 1.5px solid #6751b9;
-    background: #130f2a;
+    color: #ffffff;
+    border-radius: 50%; /* Circle looks more modern for arrows */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(99, 102, 241, 0.1);
+    backdrop-filter: blur(10px);
     position: absolute;
-    top: 55%;
-    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.arrow-left span,
-.arrow-right span {
-    font-size: 2rem;
-    font-weight: 500;
+.arrow-left:hover, .arrow-right:hover {
+    background: #6366f1;
+    border-color: #6366f1;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
 }
 
-.arrow-left {
-    left: -2rem;
-}
+.arrow-left { left: -1rem; }
+.arrow-right { right: -1rem; }
 
-.arrow-right {
-    right: -2rem;
+/* Remove default slick focus outline */
+.slick-slide {
+    outline: none;
 }
 
 @media (max-width: 1025px) {
-    .arrow-left {
-        left: 0rem;
-    }
-
-    .arrow-right {
-        right: 0rem;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .experience-container h5 {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-    }
-
-    .arrow-left {
-        left: -1rem;
-    }
-
-    .arrow-right {
-        right: -1rem;
-    }
+    .arrow-left { left: 0.5rem; }
+    .arrow-right { right: 0.5rem; }
 }

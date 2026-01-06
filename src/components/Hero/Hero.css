@@ -1,195 +1,152 @@
 .hero-container {
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 4rem;
 }
 
-.hero-container::after,
-.hero-container::before{
-    content: " ";
-    width: 28.125rem;
-    height: 28.125rem;
-    border-radius: 28.125rem;
-    background: #8d79e9;
-    position: absolute;
-    z-index: -1;
-    filter: blur(225px);
-}
-
-.hero-container::after {
-    top: -3rem;
-    left: -5rem;
-}
-
+/* Sophisticated Background Glows */
 .hero-container::before {
-    bottom: 2rem;
-    right: 0rem;
+    content: "";
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    z-index: -1;
 }
 
-.hero-content{
-    flex: 1;
-}
-
-.hero-content h4{
-    font-size: 1.4rem;
+.greeting-tag {
+    background: rgba(99, 102, 241, 0.1);
+    color: #818cf8;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 600;
-    line-height: 2rem;
-    margin-bottom: 1rem;
-    color: #674ec1;
-    font-style: italic;
+    margin-bottom: 1.5rem;
+    display: inline-block;
 }
 
-.hero-content h2{
-    font-size: 2.8rem;
-    font-weight: 400;
-    line-height: 4rem;
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
     margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #6366f1; /* Indigo from Navbar */
+}
+
+.hero-content h4 {
+    font-size: 1.5rem;
+    color: #94a3b8; /* Dimmer text for hierarchy */
+    font-weight: 500;
+    margin-bottom: 1.5rem;
 }
 
 .hero-content p {
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 2rem;
-    text-align: justify;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
 }
 
-.hero-img {
+/* Button Styling */
+.hero-btns {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.primary-btn {
+    background: #6366f1;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.outline-btn {
+    background: transparent;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover { background: #4f46e5; transform: translateY(-2px); }
+.outline-btn:hover { background: rgba(255,255,255,0.05); }
+
+/* Image and Icon Badges */
+.hero-img-wrapper {
+    position: relative;
     flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 5rem;
+    justify-content: center;
 }
 
-.hero-img > div {
-    display: flex;
-    align-items: flex-end;
-    gap: 2rem;
+.image-card {
+    position: relative;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
 }
 
-.hero-img > div > img {
-    width: 22rem;
-    transition: all 0.3s ease;
+.profile-photo {
+    width: 320px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.tech-icon {
-    width: 5rem;
-    height: 5rem;
+/* Modern floating badges instead of separate list */
+.tech-badge {
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #1e293b;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    border-radius: 0.65rem;
-    border: 1.5px solid #6852ba;
-    padding: 10px 5px;
+    font-size: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: float 4s ease-in-out infinite;
 }
 
-.large-icon {
-    width: 3rem;
-    height: auto;
-    font-size: 30px;
-    transition: all 0.3s ease;
+.icon-1 { top: 10%; left: -15%; color: #61dafb; animation-delay: 0s; }
+.icon-2 { bottom: 20%; left: -10%; color: #f7df1e; animation-delay: 1s; }
+.icon-3 { top: 30%; right: -15%; color: #e76f00; animation-delay: 2s; }
+.icon-4 { bottom: 10%; right: -5%; color: #e34f26; animation-delay: 3s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-.hero-img > div > img:hover,
-.tech-icon:hover {
-    transform: translateY(-0.5rem);
-}
-
-.rounded-box {
-    border: 2px solid #6852ba; 
-    border-radius: 15px; 
-}
-
-@media (max-width: 1025px){
-
-    .hero-content h2 {
-        font-size: 2rem;
-        line-height: 3rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-    }
-
-    .hero-img > div > img {
-        width: 15rem;
-    }
-
-    .tech-icon {
-        width: 3rem;
-    }
-}
-
-@media (max-width: 768px){
+/* Responsive */
+@media (max-width: 968px) {
     .hero-container {
         flex-direction: column;
-    }
-
-    .hero-img {
-        margin: 2rem 0 2rem 0;
-    }
-
-    .hero-container h2 {
-        margin-top: 3rem;
-    }
-
-    .hero-content h2,
-    .hero-content h4,
-    .hero-content p {
-        width: auto;
         text-align: center;
+        padding-top: 5rem;
     }
-
-    .hero-container::after,
-    .hero-container::before {
-        content: " ";
-        width: 18rem;
-        height: 28rem
-    }
-
-    .hero-container::after {
-        top: 0rem;
-        left: 0rem;
-    }
-
-    .hero-container::before {
-        bottom: 2rem;
-        right: 0rem;
-    }
-
-    .hero-img > div > img {
-        width: 18rem;
-    }
-}
-
-@media (max-width: 600px){
-    .hero-content h2 {
-        font-size: 1.7rem;
-        line-height: 2rem;
-    }
-
-    .hero-content h4{
-        font-size: 1rem;
-    }
-
-    .hero-img{
-        gap: 1rem;
-    }
-
-    .hero-img > div {
-        gap: 1rem;
-    }
-
-    .hero-img > div > img {
-        width: 16rem;
-    }
-
-    .large-icon {
-        width: 2.4rem;
-        height: 2.4rem;
-    }
+    .hero-content { display: flex; flex-direction: column; align-items: center; }
+    .hero-btns { justify-content: center; }
+    .profile-photo { width: 280px; height: 320px; }
 }

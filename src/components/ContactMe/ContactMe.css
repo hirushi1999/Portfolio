@@ -1,26 +1,19 @@
 .contact-container {
-    margin: 4rem 0;
-    position: relative;
+    margin: 8rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
 }
 
 .contact-container h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    color: #ffffff;
 }
 
 .contact-content {
     display: flex;
-    gap: 3rem;
-}
-
-@media (max-width: 768px){
-    .contact-content {
-        flex-direction: column-reverse;
-    }
-
-    .contact-container h5 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
+    gap: 5rem; 
 }

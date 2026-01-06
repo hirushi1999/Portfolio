@@ -5,59 +5,51 @@
 form {
     display: flex;
     flex-direction: column;
-    grid-gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 .name-container {
     display: flex;
-    align-items: center;
-    grid-gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 form input,
 form textarea {
     flex: 1;
     width: 100%;
-    font-size: 0.9rem;
-    color: white;
-    background: #130f2a;
-    border-radius: 0.6rem;
-    border: 1.5px solid #6751b9;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background: rgba(15, 23, 42, 0.5); /* Deep slate */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Professional Focus State */
+form input:focus,
+form textarea:focus {
+    border-color: #6366f1;
+    background: rgba(15, 23, 42, 0.8);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
 }
 
 form button {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
-    border: 1.5px solid #a892fe;
-    border-radius: 0.6rem;
-    background: linear-gradient(90deg, #a892fe 0%, #8064e8 100%);
-    padding: 0.7rem;
-    transition: all 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    background: #6366f1;
+    padding: 1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
 }
 
 form button:hover {
-    color: #a892fe;
-    background: transparent;
-}
-
-@media (max-width: 450px){
-    .name-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    form input,
-    form textarea {
-        padding: 0.7rem;
-        border-radius: 0.3rem;
-    }
-
-    form button {
-        font-size: 0.9rem;
-        padding: 0.7rem;
-        border-radius: 0.3rem;
-    }
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }

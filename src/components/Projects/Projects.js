@@ -3,6 +3,7 @@ import "./Projects.css";
 import { PROJECTS } from "../../utils/data";
 import Slider from "react-slick";
 import ProjectsCard from "./ProjectsCard/ProjectsCard";
+import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 
 const Projects = () => {
   const sliderRef = useRef();
@@ -38,13 +39,13 @@ const Projects = () => {
       <h5>Projects</h5>
 
       <div className="projects-content">
-        <div className="arrow-right" onClick={slideRight}>
-          <span class="material-symbols-outlined">&gt;</span>
-        </div>
+      <div className="arrow-right" onClick={slideRight}>
+        <RiArrowRightSLine />
+      </div>
 
-        <div className="arrow-left" onClick={slideLeft}>
-          <span class="material-symbols-outlined">&lt;</span>
-        </div>
+      <div className="arrow-left" onClick={slideLeft}>
+        <RiArrowLeftSLine />
+      </div>
 
         <Slider ref={sliderRef} {...settings}>
           {PROJECTS.map((item) => (

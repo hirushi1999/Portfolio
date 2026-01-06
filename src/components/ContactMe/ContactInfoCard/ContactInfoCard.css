@@ -3,31 +3,39 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #130f2a;
-    border-radius: 0.65rem;
-    border: 1.5px solid #6751b9;
-    padding: 1.5rem;
+    background: rgba(30, 41, 59, 0.4); /* Glass Slate */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
     margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-details-card:hover {
+    border-color: #6366f1;
+    transform: translateY(-5px);
+    background: rgba(30, 41, 59, 0.6);
 }
 
 .contact-details-card .icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
-    background: #3d3072;
-    margin-bottom: 0.8rem;
+    border-radius: 12px;
+    background: rgba(99, 102, 241, 0.1); /* Subtle Indigo Glow */
+    margin-bottom: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .icon img {
-    width: auto;
-    height: 1.8rem;
-    object-fit: contain;
+    height: 1.5rem;
+    filter: brightness(0) invert(1); /* Makes colored PNG icons white for a cleaner look */
 }
 
 .contact-details-card p {
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #cbd5e1;
 }

@@ -1,47 +1,29 @@
 .skills-container {
-    margin: 4rem 0;
-    position: relative;
-}
-
-.skills-container::after,
-.skills-container::before {
-    content: " ";
-    width: 28rem;
-    height: 28rem;
-    border-radius: 28.125rem;
-    background: #7c66e3;
-    position: absolute;
-    z-index: -1;
-    filter: blur(200px);
-}
-
-.skills-container::after {
-    top: -3rem;
-    left: -5rem;
-}
-
-.skills-container::before {
-    background: #9e51b9;
-    bottom: 0rem;
-    right: 0rem;
+    margin: 6rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
 }
 
 .skills-container h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
 .skills-content {
     display: flex;
-    align-items: flex-start;
-    gap: 3rem;
+    align-items: stretch; /* Cards and Info match height */
+    gap: 4rem;
 }
 
 .skills {
     flex: 1;
     display: grid;
-    grid-gap: 3rem;
+    grid-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -49,43 +31,20 @@
     flex: 1;
 }
 
-@media (max-width: 1025px){
-    .skills {
-        padding-left: 1rem;
-    }
-
-    .skills,
-    .skills-content {
-        grid-gap: 2rem;
-
-    }
+/* Subtler background glows */
+.skills-container::after {
+    content: " ";
+    width: 25rem;
+    height: 25rem;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    position: absolute;
+    top: -5rem;
+    right: -10rem;
+    z-index: -1;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .skills-content {
-        flex-direction: column-reverse;
-        gap: 3rem;
-    }
-
-    .skills,
-    .skills-info {
-        width: 100%;
-    }
-
-    .skills-container h5 {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-    }
-
-    .skills-container::after,
-    .skills-container::before {
-        width: 18rem;
-        height: 18rem;
-    }
-}
-
-@media (max-width: 600px){
-    .skills-container {
-        padding: 0;
+        flex-direction: column;
     }
 }
